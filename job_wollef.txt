@@ -1,0 +1,115 @@
+#job wollef
+
+>> run with 5.s time stepping at wollef_new. results go to wollefY
+
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Ao1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Ao1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Ao2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Ao2l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Am1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Am1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Am2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Am2l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Aj1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Aj1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Aj2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Aj2l.py python
+
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bo1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bo1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bo2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bo2l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bm1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bm1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bm2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bm2l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bj1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bj1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bj2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bj2l.py python
+
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Co1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Co1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Co2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Co2l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cm1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cm1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cm2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cm2l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cj1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cj1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cj2h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cj2l.py python
+
+
+
+wollef_Ao1h.py 771043
+wollef_Ao1l.py 771044
+wollef_Ao2h.py 771045
+wollef_Ao2l.py 771046
+wollef_Am1h.py 771047
+wollef_Am1l.py 771048
+wollef_Am2h.py 771049
+wollef_Am2l.py 771050
+wollef_Aj1h.py 771051
+wollef_Aj1l.py 771052
+wollef_Aj2h.py 771053
+wollef_Aj2l.py 771054
+
+wollef_Bo1h.py 771055
+wollef_Bo1l.py 771056
+wollef_Bo2h.py 771057
+wollef_Bo2l.py 771058
+wollef_Bm1h.py 771059
+wollef_Bm1l.py 771060
+wollef_Bm2h.py 771061
+wollef_Bm2l.py 771062
+wollef_Bj1h.py 771063
+wollef_Bj1l.py 771064
+wollef_Bj2h.py 771065
+wollef_Bj2l.py 771066
+
+wollef_Co1h.py 771067
+wollef_Co1l.py 771068
+wollef_Co2h.py 771069
+wollef_Co2l.py 771070
+wollef_Cm1h.py 771071
+wollef_Cm1l.py 771072
+wollef_Cm2h.py 771073
+wollef_Cm2l.py 771074
+wollef_Cj1h.py 771075
+wollef_Cj1l.py 771076
+wollef_Cj2h.py 771077
+wollef_Cj2l.py 771078
+
+>> run with save time stepping at wollef_new2. results go to wollefZ
+
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Ao1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Am1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Aj1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Aj1l.py python
+
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bo1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bm1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bj1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Bj1l.py python
+
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Co1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cm1l.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cj1h.py python
+job_submit -t 4320 -m 12000 -c p -p 1 -N C:jackisch@kit.edu -i wollef_Cj1l.py python
+
+wollef_Ao1l.py 771079
+wollef_Am1l.py 771080
+wollef_Aj1h.py 771081
+wollef_Aj1l.py 771082
+wollef_Bo1l.py 771083
+wollef_Bm1l.py 771084
+wollef_Bj1h.py 771085
+wollef_Bj1l.py 771086
+wollef_Co1l.py 771087
+wollef_Cm1l.py 771088
+wollef_Cj1h.py 771089
+wollef_Cj1l.py 771090
+
+

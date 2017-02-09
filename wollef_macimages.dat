@@ -1,0 +1,5 @@
+depth,file,threshold_l,threshold_u
+0.03,rectify/07_4_3x2.png,1,15
+0.1,rectify/07_4_10x2.png,1,15
+0.3,rectify/07_4_30x2.png,1,15
+0.7,rectify/07_4_30x2.png,1,15
