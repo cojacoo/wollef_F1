@@ -105,7 +105,7 @@ infiltscale=False
 #import profile
 #%prun -D diff_pd_prof.prof pdyn.part_diffusion_binned_pd(particles,npart,thS,mc)
 
-wdir='/work/kit/iwg/oj4748/wollefN'
+wdir='/work/kit/iwg/oj4748/wollefF1'
 
 drained=pd.DataFrame(np.array([]))
 leftover=0

@@ -42,7 +42,7 @@ tracer_intensity=11.05652174#
 tracer_c_br=0.165           #
 
 #soil matrix properties
-matrixbf='matrix_wollef_redks.dat'       #matrix base file
+matrixbf='matrix_wollef_new.dat'       #matrix base file
 matrixdeffi='matrixdefwollef_new.dat' #matrix definition file
 
 #resolution BB stain image
