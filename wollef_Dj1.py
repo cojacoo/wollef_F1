@@ -105,6 +105,16 @@ infiltscale=False
 #%prun -D diff_pd_prof.prof pdyn.part_diffusion_binned_pd(particles,npart,thS,mc)
 
 wdir='/work/kit/iwg/oj4748/wollefN'
+try:
+    #unpickle:
+    with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'rb') as handle:
+        pickle_l = pickle.load(handle)
+        dummyx = pickle.loads(pickle_l)
+        particles = pickle.loads(dummyx[0])
+        [leftover,drained,t] = pickle.loads(dummyx[1])
+    print('resuming into stored run at t='+str(t)+'...')
+except:
+    print('starting new run...')
 
 drained=pd.DataFrame(np.array([]))
 leftover=0
