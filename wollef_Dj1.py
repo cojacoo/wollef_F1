@@ -127,7 +127,7 @@ for i in np.arange(dummy.astype(int)):
     plotparticles_specht(particles,mc,pdyn,vG,runname,t,i,saving=True,relative=False,wdir=wdir)
     [particles,npart,thS,leftover,drained,t]=rE.CAOSpy_rundx1(i*output,(i+1)*output,mc,pdyn,cinf,precTS,particles,leftover,drained,6.,splitfac=4,prec_2D=False,maccoat=macscale,saveDT=saveDT,clogswitch=clogswitch,infilt_method=infiltmeth,exfilt_method=exfiltmeth,film=film,infiltscale=infiltscale)
     
-    if i/10.==np.round(i/10.):
+    if i/5.==np.round(i/5.):
         with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'wb') as handle:
         	pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t])]), handle, protocol=2)
 
