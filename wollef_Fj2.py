@@ -105,43 +105,48 @@ infiltscale=False
 #import profile
 #%prun -D diff_pd_prof.prof pdyn.part_diffusion_binned_pd(particles,npart,thS,mc)
 
-wdir='/work/kit/iwg/oj4748/wollefF1'
-try:
-    #unpickle:
-    with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'rb') as handle:
-        pickle_l = pickle.load(handle)
-        dummyx = pickle.loads(pickle_l)
-        particles = pickle.loads(dummyx[0])
-        [leftover,drained,t] = pickle.loads(dummyx[1])
-    print('resuming into stored run at t='+str(t)+'...')
-except:
-    print('starting new run...')
-
+wdir='/work/kit/iwg/oj4748/wollefF2'
 drained=pd.DataFrame(np.array([]))
 leftover=0
 output=60. #mind to set also in TXstore.index definition
 
 dummy=np.floor(t_end/output)
 t=0.
+ix=0
+TSstore=np.zeros((int(dummy),mc.mgrid.cells,2))
+
+try:
+    #unpickle:
+    with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'rb') as handle:
+        pickle_l = pickle.load(handle)
+        dummyx = pickle.loads(pickle_l)
+        particles = pickle.loads(dummyx[0])
+        [leftover,drained,t,TSstore,ix] = pickle.loads(dummyx[1])
+        ix+=1
+    print('resuming into stored run at t='+str(t)+'...')
+except:
+    print('starting new run...')
+
 #loop through plot cycles
-for i in np.arange(dummy.astype(int)):
+for i in np.arange(dummy.astype(int))[ix:]:
     plotparticles_specht(particles,mc,pdyn,vG,runname,t,i,saving=True,relative=False,wdir=wdir)
     [particles,npart,thS,leftover,drained,t]=rE.CAOSpy_rundx1(i*output,(i+1)*output,mc,pdyn,cinf,precTS,particles,leftover,drained,6.,splitfac=4,prec_2D=False,maccoat=macscale,saveDT=saveDT,clogswitch=clogswitch,infilt_method=infiltmeth,exfilt_method=exfiltmeth,film=film,infiltscale=infiltscale)
-    
+    TSstore[i,:,:]=rE.part_store(particles,mc)
+
     if i/5.==np.round(i/5.):
         with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'wb') as handle:
-        	pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t])]), handle, protocol=2)
+        	pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
 
     #pickle at reference states
     if i==29:
         with open(''.join([wdir,'/results/30_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t])]), handle, protocol=2)        
+            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
     if i==59:
         with open(''.join([wdir,'/results/60_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t])]), handle, protocol=2)
+            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
     if i==119:
         with open(''.join([wdir,'/results/120_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t])]), handle, protocol=2)
+            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
     if i==239:
         with open(''.join([wdir,'/results/240_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t])]), handle, protocol=2)
+            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)

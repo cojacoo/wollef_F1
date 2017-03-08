@@ -169,6 +169,17 @@ def CAOSpy_rundx1(tstart,tstop,mc,pdyn,cinf,precTS,particles,leftover=0,drained=
 
     return(particles,npart,thS,leftover,drained,timenow)
 
+def part_store(particles,mc):
+    dummy_n2=pd.Series(np.zeros(mc.mgrid.cells),index=np.arange(mc.mgrid.cells))
+    dummy_o2=pd.Series(np.zeros(mc.mgrid.cells),index=np.arange(mc.mgrid.cells))
+    dummy_n=particles.loc[((particles.age>0.)),'cell'].value_counts().sort_index()
+    dummy_o=particles.loc[((particles.age<=0.)),'cell'].value_counts().sort_index()
+    dummy_n2.loc[dummy_n.index]+=dummy_n
+    dummy_o2.loc[dummy_o.index]+=dummy_o
+    dummy=pd.concat([dummy_n2,dummy_o2],axis=1)
+    dummy.columns=['new','old']
+    return dummy.values
+
 #define plot routine for macropore states
 def plot_mac(particles,savef=False):
     import seaborn as sns
