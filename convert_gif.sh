@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /work/kit/iwg/oj4748/weierbach
 #convert eWlef_Dm2*.pdf Dm2.gif
 convert eWlef_Do2*.pdf Do2.gif
 convert eWlef_Dj2*.pdf Dj2.gif
