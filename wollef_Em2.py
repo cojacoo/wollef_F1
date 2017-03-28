@@ -133,8 +133,8 @@ for i in np.arange(dummy.astype(int))[ix:]:
     [particles,npart,thS,leftover,drained,t]=rE.CAOSpy_rundx1(i*output,(i+1)*output,mc,pdyn,cinf,precTS,particles,leftover,drained,6.,splitfac=4,prec_2D=False,maccoat=macscale,saveDT=saveDT,clogswitch=clogswitch,infilt_method=infiltmeth,exfilt_method=exfiltmeth,film=film,infiltscale=infiltscale)
     TSstore[i,:,:]=rE.part_store(particles,mc)
 
-    if i/5.==np.round(i/5.):
-        with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'wb') as handle:
+    #if i/5.==np.round(i/5.):
+    with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'wb') as handle:
         	pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
 
     #pickle at reference states

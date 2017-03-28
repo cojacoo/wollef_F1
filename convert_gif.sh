@@ -9,3 +9,5 @@ convert /work/kit/iwg/oj4748/wollefF2/results/eWlef_Eo2*.pdf /work/kit/iwg/oj474
 convert /work/kit/iwg/oj4748/wollefF2/results/eWlef_Fj2*.pdf /work/kit/iwg/oj4748/wollefF2/results/Fj2.gif
 convert /work/kit/iwg/oj4748/wollefF2/results/eWlef_Fm2*.pdf /work/kit/iwg/oj4748/wollefF2/results/Fm2.gif
 convert /work/kit/iwg/oj4748/wollefF2/results/eWlef_Fo2*.pdf /work/kit/iwg/oj4748/wollefF2/results/Fo2.gif
+
+tar -zcvf /work/kit/iwg/oj4748/wollefF2/result_gis.tar.gz /work/kit/iwg/oj4748/wollefF2/results/*.gif
