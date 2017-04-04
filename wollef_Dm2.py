@@ -79,7 +79,7 @@ mc.LTEpercentile=70 #new parameter
 
 t_end=24.*3600.
 #saveDT=True
-saveDT=0.5
+saveDT=2.
 
 #1: MDA
 #2: MED
@@ -127,7 +127,7 @@ try:
     print('resuming into stored run at t='+str(t)+'...')
 except:
     print('starting new run...')
-runname='Wollef_Dm2x'
+runname='Wollef_Dm2y'
 
 #loop through plot cycles
 for i in np.arange(dummy.astype(int))[ix:]:
