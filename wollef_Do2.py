@@ -78,7 +78,9 @@ mc.LTEpercentile=70 #new parameter
 
 
 t_end=24.*3600.
-saveDT=True
+#saveDT=True
+saveDT=0.5
+
 
 #1: MDA
 #2: MED
@@ -127,6 +129,7 @@ try:
 except:
     print('starting new run...')
 
+runname='Wollef_Do2x'
 #loop through plot cycles
 for i in np.arange(dummy.astype(int))[ix:]:
     plotparticles_specht(particles,mc,pdyn,vG,runname,t,i,saving=True,relative=False,wdir=wdir)
