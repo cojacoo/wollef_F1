@@ -161,7 +161,7 @@ def CAOSpy_rundx1(tstart,tstop,mc,pdyn,cinf,precTS,particles,leftover=0,drained=
             display.display_pretty(''.join(['time: ',str(timenow),'s  |  n_particles: ',str(pcount),'  |  precip: ',str(len(p_inf)),'  |  advect: ',str(np.sum(((particles.flag>0) & (particles.flag<=len(mc.maccols))))),'  |  exfilt: ',str(int(exfilt_p)),'  |  mean v(adv): ',str(particles.loc[((particles.flag>0) & (particles.flag<=len(mc.maccols))),'advect'].mean())[:7]+str(particles.loc[((particles.flag>0) & (particles.flag<=len(mc.maccols))),'advect'].mean())[-4:],' m/s']))
             display.display_pretty(''.join(['time: ',str(timenow),'s  |  n_particles now: ',str(len(particles)),'  |  leftover: ',str(leftover)]))
         else:
-            print 'time: ',timenow,'s'
+            print('time: ',timenow,'s')
 
         #particles.loc[particles.cell<0,'cell']=mc.mgrid.cells.values
         #particles=particles[pondparts]

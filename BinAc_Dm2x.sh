@@ -10,12 +10,11 @@
 
 #cd /beegfs/work/ka_oj4748
 
-echo "my Username is:"
+echo "User:"
 whoami
-echo "My job is running on node:"
+echo "Job running on node:"
 uname -a
 
- 
 module load numlib/numpy
 module load lib/matplotlib
 module load lib/pandas
