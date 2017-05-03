@@ -24,7 +24,7 @@ import run_echoRD as rE
 [dr,mc,mcp,pdyn,cinf,vG]=rE.loadconnect(pathdir='../',mcinif='mcini_wollef_Dm1',experimental=True)
 mc = mcp.mcpick_out(mc,'wollef_Dm1.pickle')
 
-runname='Wollef_Dm2'
+runname='Wollef_Dm2y'
 
 mc.advectref='Shipitalo'
 mc.soilmatrix=pd.read_csv(mc.matrixbf, sep=' ')
@@ -106,7 +106,7 @@ infiltscale=False
 #import profile
 #%prun -D diff_pd_prof.prof pdyn.part_diffusion_binned_pd(particles,npart,thS,mc)
 
-wdir='/work/kit/iwg/oj4748/wollefF2'
+wdir='beegfs/work/ka_oj4748/wollefF2'
 drained=pd.DataFrame(np.array([]))
 leftover=0
 output=60. #mind to set also in TXstore.index definition
