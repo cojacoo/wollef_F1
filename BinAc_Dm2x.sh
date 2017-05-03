@@ -15,6 +15,7 @@ whoami
 echo "Job running on node:"
 uname -a
 
+module load devel/python/2.7.12
 module load numlib/numpy
 module load lib/matplotlib
 module load lib/pandas
