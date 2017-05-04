@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import scipy as sp
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import os, sys
 try:
@@ -106,7 +108,7 @@ infiltscale=False
 #import profile
 #%prun -D diff_pd_prof.prof pdyn.part_diffusion_binned_pd(particles,npart,thS,mc)
 
-wdir='beegfs/work/ka_oj4748/wollefF2'
+wdir='/beegfs/work/ka_oj4748/wollefF2'
 drained=pd.DataFrame(np.array([]))
 leftover=0
 output=60. #mind to set also in TXstore.index definition

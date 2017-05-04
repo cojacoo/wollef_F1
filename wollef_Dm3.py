@@ -24,7 +24,7 @@ import run_echoRD as rE
 [dr,mc,mcp,pdyn,cinf,vG]=rE.loadconnect(pathdir='../',mcinif='mcini_wollef_Dm1',experimental=True)
 mc = mcp.mcpick_out(mc,'wollef_Dm1.pickle')
 
-runname='Wollef_Dm3'
+runname='Wollef_Dm2y'
 mc.soilgrid = np.fmin(mc.soilgrid+1,4) #top soil definition changed
 mc.advectref='Shipitalo'
 mc.soilmatrix=pd.read_csv(mc.matrixbf, sep=' ')

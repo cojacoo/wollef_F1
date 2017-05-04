@@ -5,4 +5,4 @@ module load numlib/python_scipy
 module load numlib/python_pandas
 module load lib/matplotlib
 
-python wollef_Dj3.py
+python wollef_Dm3.py
