@@ -55,7 +55,7 @@ mc.particlemass=dr.waterdensity(np.array(20),np.array(-9999))*mc.particleV #assu
 mc=dr.ini_bins(mc)
 mc=dr.mc_diffs(mc,np.max(np.max(mc.mxbin)))
 
-[mc,particles,npart]=dr.particle_setup(mc)
+[mc,particles,npart]=dr.particle_setup(mc,paral=False)
 
 #define bin assignment mode for infiltration particles
 mc.LTEdef='instant'#'ks' #'instant' #'random'
