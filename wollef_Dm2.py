@@ -22,9 +22,9 @@ from hydro_tools import plotparticles_t,hydroprofile,plotparticles_specht
 import run_echoRD as rE
 #connect and load project
 [dr,mc,mcp,pdyn,cinf,vG]=rE.loadconnect(pathdir='../',mcinif='mcini_wollef_Dm1',experimental=True)
-mc = mcp.mcpick_out(mc,'wollef_Dm1.pickle')
+mc = mcp.mcpick_out(mc,'wollef_Dm1z.pickle')
 
-runname='Wollef_Dm2y'
+runname='Wollef_Dm2z'
 
 mc.advectref='Shipitalo'
 mc.soilmatrix=pd.read_csv(mc.matrixbf, sep=' ')
