@@ -114,7 +114,7 @@ output=60. #mind to set also in TXstore.index definition
 dummy=np.floor(t_end/output)
 t=0.
 ix=0
-TSstore=np.zeros((int(dummy),mc.mgrid.cells,2))
+TSstore=np.zeros((int(dummy),mc.mgrid.cells[0],2))
 
 try:
     #unpickle:
