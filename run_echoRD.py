@@ -20,7 +20,10 @@ def loadconnect(pathdir='./', mcinif='mcini', oldvers=False, experimental=False)
     if oldvers:
         import mcpickle as mcp
     else:
-        import mcpickle3 as mcp
+        if sys.version_info[0]==3:
+            import mcpickle3 as mcp
+        else:
+            import mcpickle2 as mcp
     import infilt as cinf
     if experimental:
         import partdyn_d5 as pdyn
