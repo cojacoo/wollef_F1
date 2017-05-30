@@ -10,9 +10,9 @@ try:
 except:
    import pickle
 #connect echoRD Tools
-pathdir='../echoRD/' #path to echoRD
-lib_path = os.path.abspath(pathdir)
-sys.path.append(lib_path)
+#pathdir='../echoRD/' #path to echoRD
+
+sys.path.append('/home/ka/ka_iwg/ka_oj4748/echoRD/echoRD')
 import vG_conv as vG
 from hydro_tools import plotparticles_t,hydroprofile,plotparticles_specht
 
@@ -108,7 +108,7 @@ infiltscale=False
 #import profile
 #%prun -D diff_pd_prof.prof pdyn.part_diffusion_binned_pd(particles,npart,thS,mc)
 
-wdir='/beegfs/work/ka_oj4748/wollefF2'
+wdir='/beegfs/work/ka_oj4748/wollef_F1'
 drained=pd.DataFrame(np.array([]))
 leftover=0
 output=60. #mind to set also in TXstore.index definition
@@ -116,11 +116,11 @@ output=60. #mind to set also in TXstore.index definition
 dummy=np.floor(t_end/output)
 t=0.
 ix=0
-TSstore=np.zeros((int(dummy),mc.mgrid.cells,2))
+TSstore=np.zeros((int(dummy),mc.mgrid.cells[0],2))
 
 try:
     #unpickle:
-    with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'rb') as handle:
+    with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick3']),'rb') as handle:
         pickle_l = pickle.load(handle)
         dummyx = pickle.loads(pickle_l)
         particles = pickle.loads(dummyx[0])
@@ -140,16 +140,4 @@ for i in np.arange(dummy.astype(int))[ix:]:
     with open(''.join([wdir,'/results/Z',runname,'_Mstat.pick']),'wb') as handle:
         	pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
 
-    #pickle at reference states
-    if i==29:
-        with open(''.join([wdir,'/results/30_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
-    if i==59:
-        with open(''.join([wdir,'/results/60_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
-    if i==119:
-        with open(''.join([wdir,'/results/120_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
-    if i==239:
-        with open(''.join([wdir,'/results/240_',runname,'_Mstat.pick']),'wb') as handle:
-            pickle.dump(pickle.dumps([pickle.dumps(particles),pickle.dumps([leftover,drained,t,TSstore,i])]), handle, protocol=2)
+    
