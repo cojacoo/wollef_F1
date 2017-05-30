@@ -24,7 +24,7 @@ from hydro_tools import plotparticles_t,hydroprofile,plotparticles_specht
 import run_echoRD as rE
 #connect and load project
 [dr,mc,mcp,pdyn,cinf,vG]=rE.loadconnect(pathdir='../',mcinif='mcini_wollef_Dm1',experimental=True)
-mc = mcp.mcpick_out(mc,'wollef_Dm1.pickle')
+mc = mcp.mcpick_out(mc,'wollef_Dm1.pickle3')
 
 runname='Wollef_Dm2y'
 mc.soilgrid = np.fmin(mc.soilgrid+1,4) #top soil definition changed
